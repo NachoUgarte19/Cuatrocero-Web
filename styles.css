@@ -1,0 +1,333 @@
+html, body {
+    overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* NAVBAR */
+.navbar-brand-logo {
+    height: 50px;
+}
+.navbar {
+    background-color: #0D0D0D;
+    color: white;
+}
+.navbar-nav .nav-item .nav-link {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    margin: 10px 10px;
+}
+.navbar-nav a {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.navbar-nav a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #FF4C1E, #FF7A3D, #FFD1B3);
+    z-index: 1;
+    transition: width 0.4s ease-in-out;
+    transform: translateX(-50%);
+}
+.navbar-nav .nav-link:hover {
+    color: #FF4C1E !important; /* Cambio de color al hover */
+}
+.navbar-nav a:hover::before {
+    width: 100%;
+}
+.navbar-nav .nav-item .nav-link {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+}
+.navbar-toggler {
+    border-color: transparent;
+}
+@media (min-width: 768px) {
+    .navbar-nav {
+        justify-content: end;
+    }
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 60vh;       
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('/img/imagen-hero.jpg') center/cover no-repeat;
+    filter: blur(8px);
+    transform: scale(1.05);
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+.hero-content h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+.hero-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
+    color: #eee;
+    margin-bottom: 1.5rem;
+}
+
+.btn-hero1 {
+    background-color: #FF4C1E;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin-right: 1rem;
+}
+.btn-hero1:hover {
+    background-color: #FF7A3D;
+    color: white;
+}
+.btn-hero2 {
+    border: 2px solid white;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-family: 'Inter', sans-serif;
+}
+.btn-hero2:hover {
+    background-color: white;
+    color: #0D0D0D;
+    font-family: 'Inter', sans-serif;
+}
+
+/* QUIENES SOMOS */
+.container-quienes-somos {
+    padding: 4rem 1rem;
+    text-align: center;
+    background-image: url('/img/fondo-quienes-somos.png');
+    background-color: #0D0D0D;
+    color: #F5F5F5;
+}
+.container-quienes-somos h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+.container-quienes-somos h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #FF4C1E;
+    margin: 0.5rem auto;
+}
+.container-quienes-somos p {
+    max-width: 800px;
+    margin: 0.5rem auto;
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-cta {
+    margin-top: 2rem;
+    font-size: 1.125rem;
+    font-family: 'Inter', sans-serif;
+    color: #FF4C1E;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* FEATURES */
+
+.features {
+    background-color: #0D0D0D;
+    color: #F5F5F5;
+}
+.features .section-title {
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* CARD ESTILOS */
+.feature-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* Icono antes del título */
+.feature-card .card-title {
+    position: relative;
+    padding-left: 1.8rem;
+    font-family: 'Bebas Neue', sans-serif;
+}
+.feature-card .card-title::before {
+    content: "✅";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+
+/* CARROUSEL GALERÍA */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.carousel-inner {
+    max-height: 500px;
+}
+
+@media (min-width: 768px) {
+    .img-desktop {
+        height: 600px;
+    }
+    .img-desktop img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+/* TESTIMONIOS */
+.card-testimonio {
+    height: 180px;
+    background-color: #383b3f;
+}
+.card-testimonio p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ffffff;
+}
+.card-testimonio {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card-testimonio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.blockquote {
+    border-left: 4px solid #FF4C1E;
+    padding-left: 1rem;
+    margin-bottom: 0;
+}
+
+@media only screen and (min-width: 470px) and (max-width: 767.98px) {
+    .card-testimonio {
+        min-height: 200px;
+    }
+}
+
+@media (min-width: 576px) {
+  .card-testimonio {
+    min-height: 100px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-testimonio {
+    min-height: 250px;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-testimonio {
+    min-height: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-testimonio {
+    min-height: 220px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .card-testimonio {
+    min-height: 220px;
+  }
+}
+
+
+/* FOOTER */
+#pedido .card {
+    border: none;
+    border-radius: 1rem;
+    background-color: #FFFFFF;
+}
+#pedido .card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: #0D0D0D;
+}
+#pedido .card-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #555;
+}
+#pedido .btn-success {
+    background-color: #25D366;
+    border: none;
+    transition: background 0.3s ease;
+}
+#pedido .btn-success:hover {
+    background-color: #1ebe57;
+}
+
+.link-light {
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+.link-light:hover {
+    opacity: 1;
+}
+
+footer a.small {
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+footer a.small:hover {
+    opacity: 1;
+}
+
+
